@@ -1,0 +1,151 @@
+{
+  "student": "Your Name",
+  "rows_raw": 15411,
+  "cols_raw": 14,
+  "rows_clean": 15240,
+  "cols_clean": 15,
+  "duplicates_removed": 167,
+  "missing_total": 0,
+  "findings": [
+    "Market is dominated by a few brands: Maruti and Hyundai make up 51.7% of 15,240 listings.",
+    "Petrol and diesel cars account for 97.7% of listings; CNG, LPG and Electric are rare.",
+    "Prices are strongly right-skewed: median = 5.59 lakh vs mean = 7.75 lakh (skewness 10.1), pulled up by luxury cars.",
+    "Automatic cars have a median price 2.1x that of manual cars (10.50 vs 5.00 lakh).",
+    "max_power is the feature most strongly correlated with price (r = 0.75), followed by engine size (r = 0.59).",
+    "Vehicle age has a modest negative relationship with price (Pearson r = -0.24, Spearman = -0.48); km_driven is weaker still (Spearman = -0.17).",
+    "Luxury brands lead on average price: Land Rover, BMW, Jaguar (averages of 38.5, 26.9, 26.5 lakh).",
+    "Mileage correlates negatively with price (r = -0.31) likely partly because powerful, expensive cars burn more fuel (mileage vs max_power r = -0.53) - this is association, not cause."
+  ],
+  "limitations": [
+    "Asking prices from one platform (CarDekho), not final transaction prices.",
+    "No city, condition, accident history or trim-level information, so price drivers are only partly captured.",
+    "Only 4 electric and 44 LPG cars - no reliable conclusions can be drawn about them.",
+    "Correlation does not prove causation; features such as engine size and power are themselves related.",
+    "Dataset has no listing date; vehicle_age is relative to the scrape date."
+  ],
+  "outliers": {
+    "selling_price": {
+      "outliers": 1371,
+      "pct": 9.0,
+      "upper_fence": 1485000.0
+    },
+    "km_driven": {
+      "outliers": 462,
+      "pct": 3.0,
+      "upper_fence": 130000.0
+    },
+    "mileage": {
+      "outliers": 87,
+      "pct": 0.6,
+      "upper_fence": 31.2
+    },
+    "engine": {
+      "outliers": 2101,
+      "pct": 13.8,
+      "upper_fence": 2159.5
+    },
+    "max_power": {
+      "outliers": 852,
+      "pct": 5.6,
+      "upper_fence": 182.2
+    },
+    "vehicle_age": {
+      "outliers": 153,
+      "pct": 1.0,
+      "upper_fence": 14.0
+    }
+  },
+  "corr_with_price": {
+    "max_power": 0.751,
+    "engine": 0.586,
+    "mileage": -0.305,
+    "vehicle_age": -0.241,
+    "seats": 0.115,
+    "km_driven": -0.106
+  },
+  "spearman_age": -0.478,
+  "spearman_km": -0.166,
+  "trans_median": {
+    "Automatic": 10.5,
+    "Manual": 5.0
+  },
+  "trans_mean": {
+    "Automatic": 15.77,
+    "Manual": 5.66
+  },
+  "fuel_share": {
+    "Petrol": 49.6,
+    "Diesel": 48.2,
+    "CNG": 2.0,
+    "LPG": 0.3,
+    "Electric": 0.0
+  },
+  "brand_share_top5": {
+    "Maruti": 32.4,
+    "Hyundai": 19.4,
+    "Honda": 9.7,
+    "Mahindra": 6.5,
+    "Toyota": 5.2
+  },
+  "age_median_price": {
+    "1": 7.5,
+    "3": 7.48,
+    "5": 6.0,
+    "8": 4.5,
+    "10": 3.36,
+    "15": 1.42
+  },
+  "mileage_by_fuel": {
+    "CNG": 25.82,
+    "Diesel": 20.06,
+    "Electric": NaN,
+    "LPG": 17.84,
+    "Petrol": 19.12
+  },
+  "brand_top_price": [
+    {
+      "brand": "Land Rover",
+      "count": 50,
+      "mean": 38.47,
+      "median": 34.88
+    },
+    {
+      "brand": "BMW",
+      "count": 436,
+      "mean": 26.87,
+      "median": 22.88
+    },
+    {
+      "brand": "Jaguar",
+      "count": 58,
+      "mean": 26.47,
+      "median": 25.0
+    },
+    {
+      "brand": "Mercedes-Benz",
+      "count": 331,
+      "mean": 24.84,
+      "median": 18.0
+    },
+    {
+      "brand": "Audi",
+      "count": 190,
+      "mean": 19.71,
+      "median": 17.0
+    }
+  ],
+  "median_price": 5.59,
+  "mean_price": 7.75,
+  "p99_price": 45.31,
+  "max_price": 395.0,
+  "min_price": 0.4,
+  "km_median": 50000.0,
+  "power_price_corr_petrol_diesel": 0.751,
+  "diesel_vs_petrol_median": {
+    "CNG": 3.7,
+    "Diesel": 7.0,
+    "Electric": 18.58,
+    "LPG": 1.82,
+    "Petrol": 4.6
+  }
+}

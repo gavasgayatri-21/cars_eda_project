@@ -1,0 +1,9 @@
+step,rows,columns
+Original dataset (incl. index column),15411,14
+Dropped redundant index column 'Unnamed: 0',15411,13
+Standardised brand label 'ISUZU' -> 'Isuzu',15411,13
+Removed exact duplicate rows,15244,13
+Removed rows with 0 seats (invalid),15242,13
+"Removed km_driven > 1,000,000 (likely entry errors)",15240,13
+Set mileage of Electric cars to NaN (4 rows kept),15240,13
+"Added engineered columns price_lakh, km_per_year",15240,15
