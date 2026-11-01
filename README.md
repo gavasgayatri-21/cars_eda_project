@@ -32,7 +32,7 @@ The dataset is **not included** in the submission. The script reads `cardekho_da
 ## How to run
 
 ```bash
-pip install pandas numpy matplotlib seaborn
+pip install pandas numpy matplotlib seaborn scipy
 python StudentName_Cars_EDA_Project.py
 ```
 
